@@ -1,0 +1,664 @@
+/* Umumiy reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    border-bottom: 3px solid #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+/* About Section */
+.about {
+    background: #fff;
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #777;
+    line-height: 1.7;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.about:hover {
+    transform: scale(1.02);
+}
+
+/* Skills Section */
+.skills {
+    background: #f9f9f9;
+    padding: 60px 0;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill-item {
+    background: #fff;
+    padding: 25px;
+    width: 220px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item img {
+    max-width: 80px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Project Section */
+.project-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    background: #fff;
+    padding: 60px 0;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+    background-color: #fff;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .skills ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-item {
+        width: 80%;
+    }
+
+    .project-item img {
+        max-width: 90%;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+}
+/* Ijtimoiy tarmoq tugmalari uchun uslublar */
+.social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #34b7f1; /* Tugmaning asosiy rangi */
+    transition: all 0.3s ease;
+    width: 100%; /* Tugma kengligini 100% ga o'rnatamiz */
+    max-width: 450px; /* Kenglikni maksimal 450px qilish */
+    gap: 10px; /* Ikonkalar va matn orasidagi bo'shliq */
+}
+
+/* Instagram tugmasi */
+.instagram-link {
+    background-color: #E4405F; /* Instagramning asosiy rangi */
+}
+
+.instagram-link:hover {
+    background-color: #C13584; /* Hoverda o'zgaradigan rang */
+    transform: translateY(-3px); /* Hoverda yuqoriga siljish effekti */
+}
+
+/* Telegram tugmasi */
+.telegram-link {
+    background-color: #0088CC; /* Telegramning asosiy rangi */
+}
+
+.telegram-link:hover {
+    background-color: #0077B5; /* Hoverda o'zgaradigan rang */
+    transform: translateY(-3px); /* Hoverda yuqoriga siljish effekti */
+}
+
+/* Ikonkalar bilan tugmalar (Agar ikonka qo'shilsa) */
+.social-link i {
+    margin-right: 10px; /* Ikonka va matn orasida bo'shliq */
+    font-size: 18px; /* Ikonkani kattaligi */
+}
+
+/* Tugma hover effekti */
+.social-link:hover {
+    background-color: #008CBA; /* Hover rang o'zgarishi */
+    transform: translateY(-5px); /* Hoverda yuqoriga siljish effekti */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Hoverda soya kuchayadi */
+}
+
+/* Tugma ichidagi matn */
+.social-link span {
+    font-size: 16px;
+}
+/* Telefon raqami va SMS tugmasi uchun dizayn */
+.phone-message {
+    background-color: #f9f9f9;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.phone-message h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.phone-description {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.sms-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #34b7f1; /* Tugma rangi */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sms-btn:hover {
+    background-color: #0288d1;
+    transform: scale(1.05);
+}
+
+.sms-btn i {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .sms-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* Dasturlarni bilish bo'limi uchun dizayn */
+.skills {
+    background: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-out; /* Bo'limni sahifada paydo qilish animatsiyasi */
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Har bir skill uchun animatsiya */
+.skill-item {
+    background: #fff;
+    padding: 25px;
+    width: 220px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards; /* Animatsiya qo'shish */
+}
+
+.skill-item:nth-child(1) {
+    animation-delay: 0.2s; /* Animatsiyaning kechikish va tartibini sozlash */
+}
+.skill-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.skill-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.skill-item:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.skill-item img {
+    max-width: 80px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item:hover img {
+    transform: scale(1.1);
+}
+
+.skill-item h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Progress bar uchun uslub */
+.progress-bar {
+    background-color: #eee;
+    width: 100%;
+    height: 12px;
+    border-radius: 10px;
+    margin: 15px 0;
+    opacity: 0;
+    animation: fadeInBar 1s ease-out forwards; /* Progress bar uchun animatsiya */
+}
+
+.progress {
+    height: 100%;
+    background-color: #4CAF50; /* Rangni o'zgartirish mumkin */
+    border-radius: 10px;
+    width: 0%; /* Dastlab progress bar o'chirilgan bo'ladi */
+    animation: fillBar 2s ease-out forwards; /* Progress barni to'ldirish animatsiyasi */
+}
+
+/* Hover animatsiyasini qo'shish */
+.skill-item:hover {
+    animation: bounce 0.6s ease-in-out;
+}
+
+/* Animatsiya uchun kalitlar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fillBar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeInBar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive dizayn: kichik ekranlarda */
+@media (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-item {
+        width: 80%;
+    }
+}
+/* Dasturlarni bilish bo'limi uchun dizayn */
+.skills {
+    background: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-out; /* Bo'limni sahifada paydo qilish animatsiyasi */
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Har bir skill uchun animatsiya */
+.skill-item {
+    background: #fff;
+    padding: 25px;
+    width: 220px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards; /* Animatsiya qo'shish */
+    position: relative; /* Rasm uchun aylanishni qo'llash uchun */
+}
+
+.skill-item:nth-child(1) {
+    animation-delay: 0.2s; /* Animatsiyaning kechikish va tartibini sozlash */
+}
+.skill-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.skill-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.skill-item:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.skill-item img {
+    max-width: 80px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    border-radius: 50%; /* Rasmni doira shaklida qilish */
+    transition: all 0.5s ease-in-out;
+}
+
+.skill-item:hover img {
+    transform: rotate(360deg); /* Rasm atrofida aylanish */
+}
+
+.skill-item h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Progress bar uchun uslub */
+.progress-bar {
+    background-color: #eee;
+    width: 100%;
+    height: 12px;
+    border-radius: 10px;
+    margin: 15px 0;
+    opacity: 0;
+    animation: fadeInBar 1s ease-out forwards; /* Progress bar uchun animatsiya */
+}
+
+.progress {
+    height: 100%;
+    background-color: #4CAF50; /* Rangni o'zgartirish mumkin */
+    border-radius: 10px;
+    width: 0%; /* Dastlab progress bar o'chirilgan bo'ladi */
+    animation: fillBar 2s ease-out forwards; /* Progress barni to'ldirish animatsiyasi */
+}
+
+/* Hover animatsiyasini qo'shish */
+.skill-item:hover {
+    animation: bounce 0.6s ease-in-out;
+}
+
+/* Animatsiya uchun kalitlar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fillBar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 90%; /* Foizga qarab progress barni to'ldirish */
+    }
+}
+
+@keyframes fadeInBar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive dizayn: kichik ekranlarda */
+@media (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-item {
+        width: 80%;
+    }
+}
